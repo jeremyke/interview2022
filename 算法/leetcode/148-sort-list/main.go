@@ -1,5 +1,7 @@
 package main
 
+import "sort"
+
 func main() {
 
 }
@@ -25,11 +27,12 @@ func sortList(head *ListNode) *ListNode {
 		return head
 	}
 	//对数组进行插入排序
-	for i := 1; i < n; i++ {
-		for j := i; j > 0 && headArr[j] < headArr[j-1]; j-- {
-			swap(headArr, j, j-1)
-		}
-	}
+	//for i := 1; i < n; i++ {
+	//	for j := i; j > 0 && headArr[j] < headArr[j-1]; j-- {
+	//		swap(headArr, j, j-1)
+	//	}
+	//}
+	sort.Ints(headArr)
 	//便历数组生成node
 	var newList *ListNode
 	for k := n - 1; k >= 0; k-- {
