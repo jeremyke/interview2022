@@ -47,3 +47,7 @@ func main() {
 	res := reverseBetween(aLink, 3, 3)
 	showLink(res)
 }
+
+func reverseBetween() {
+
+}
